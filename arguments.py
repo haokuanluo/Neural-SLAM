@@ -162,6 +162,9 @@ def get_args():
     parser.add_argument('-ot', '--obs_threshold', type=float, default=1)
     parser.add_argument('-ct', '--collision_threshold', type=float, default=0.20)
     parser.add_argument('-nl', '--noise_level', type=float, default=1.0)
+    parser.add_argument(
+        "--evaluation", type=str, required=True, choices=["local", "remote"]
+    )
 
     # parse arguments
     args = parser.parse_args()
